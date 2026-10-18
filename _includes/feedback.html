@@ -1,0 +1,9 @@
+{%- comment -%}
+ご意見・お問い合わせの欄。呼び出し元のページの front matter の app から、_data/apps.yml のフォームを引く。
+{%- endcomment -%}
+{%- assign app = site.data.apps | where: "id", page.app | first -%}
+{%- assign repo = 'https://github.com/' | append: site.repository -%}
+<ul>
+<li><a href="{{ repo }}/issues/new?template={{ app.form }}">ご意見・お問い合わせを送る（GitHub の Issue）</a></li>
+<li><a href="{{ repo }}/issues?q=label%3A{{ app.id }}">送られた Issue の一覧</a></li>
+</ul>

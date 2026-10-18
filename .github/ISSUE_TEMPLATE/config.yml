@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: あしもりんのサポート（使い方・よくある質問）
+    url: https://tofu76.github.io/app-support/asimorin/support.html
+    about: あしもりんの使い方とよくある質問です。まずこちらをご覧ください。
+  - name: No梗塞のサポート（使い方・よくある質問）
+    url: https://tofu76.github.io/app-support/nokosoku/support.html
+    about: No梗塞の使い方とよくある質問です。まずこちらをご覧ください。

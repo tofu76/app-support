@@ -1,0 +1,43 @@
+# No梗塞アプリの「ご意見・ご要望」画面が、このフォームを事前入力つきで開く（tofu76/nokosoku-support の feedback.yml から移した）。
+#   https://github.com/tofu76/app-support/issues/new?template=feedback-nokosoku.yml&kind=…&content=…&device=…&title=…
+# 守ること（アプリ側と食い違うと事前入力が効かなくなる）:
+#   - 項目の id（kind / content / device）を変えない。
+#   - kind の選択肢の文字列（使い方 / 不具合 / 要望 / その他）は、アプリが送る kind の値と一字一句そろえる。
+name: No梗塞へのご意見・ご要望
+description: No梗塞の使い方・不具合・ご要望をお寄せください。
+title: "【No梗塞】"
+labels: ["nokosoku"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **送った内容は公開され、誰でも読めます。**
+        - 名前・メールアドレスなどの連絡先は書かないでください。
+        - 血圧などの健康の詳しい内容は書かないでください。
+        - 医療的な相談にはお答えできません。
+        - 土曜・日曜に確認してお返事します（平日はお返事できません）。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 使い方
+        - 不具合
+        - 要望
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      description: できるだけ具体的にお書きください（不具合は、どの画面で何をしたらどうなったか）。
+    validations:
+      required: true
+  - type: textarea
+    id: device
+    attributes:
+      label: 端末の情報（任意）
+      description: アプリの版とタイムゾーンなどです。アプリから開いたときは自動で入ります。不要なら消してください。
+    validations:
+      required: false

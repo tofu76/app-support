@@ -1,0 +1,14 @@
+{%- comment -%}
+アプリのトップ（<id>/index.md）の本文。_data/apps.yml の説明とページの一覧から作る。
+{%- endcomment -%}
+{%- assign app = site.data.apps | where: "id", page.app | first -%}
+<h1>{{ app.name }}</h1>
+<p>{{ app.summary }}（{{ app.platforms }}）</p>
+<ul>
+{%- for p in app.pages %}
+<li><a href="{{ '/' | append: app.id | append: '/' | append: p.path | relative_url }}">{{ p.title }}</a></li>
+{%- endfor %}
+</ul>
+<h2>ご意見・お問い合わせ</h2>
+{% include feedback.html %}
+<p class="note">送った内容は公開され、GitHub のアカウントが要ります。名前・連絡先などの個人情報は書かないでください。土曜・日曜に確認してお返事します（平日はお返事できません）。</p>

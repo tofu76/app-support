@@ -1,0 +1,42 @@
+# あしもりんの設定「お問い合わせ」が、このフォームを開く。
+#   https://github.com/tofu76/app-support/issues/new?template=feedback-asimorin.yml
+# 項目の id（kind / content / device）は No梗塞のフォームとそろえてある。
+# アプリから事前入力で開くようにするときは、id と kind の選択肢の文字列を変えないこと。
+name: あしもりんへのご意見・お問い合わせ
+description: あしもりんの使い方・不具合・ご要望をお寄せください。
+title: "【あしもりん】"
+labels: ["asimorin"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **送った内容は公開され、誰でも読めます。**
+        - 全学認証の ID・パスワード、学籍番号、氏名、メールアドレスなどは書かないでください。
+        - 掲示の本文や、授業・課題の内容をそのまま貼らないでください（大学の情報です）。
+        - あしもりんは岡山県立大学の公式アプリではありません。大学のシステムや授業についてのお問い合わせには、お答えできません。
+        - 土曜・日曜に確認してお返事します（平日はお返事できません）。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 使い方
+        - 不具合
+        - 要望
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      description: できるだけ具体的にお書きください（不具合は、どの画面で何をしたらどうなったか）。
+    validations:
+      required: true
+  - type: textarea
+    id: device
+    attributes:
+      label: 端末の情報（任意）
+      description: 機種、iOS・Android の版、アプリの版（設定 › このアプリについて › バージョン）などです。
+    validations:
+      required: false

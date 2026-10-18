@@ -1,0 +1,19 @@
+# GitHub Pages（Jekyll）の設定。公開先は https://tofu76.github.io/app-support/
+title: tofu76 のアプリ サポート
+description: tofu76 が個人で開発しているアプリのサポート・プライバシーポリシー・お問い合わせ窓口
+lang: ja
+baseurl: /app-support
+url: https://tofu76.github.io
+repository: tofu76/app-support
+author: Toshihiro Funamoto
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md

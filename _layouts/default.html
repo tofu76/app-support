@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+{%- assign app = site.data.apps | where: "id", page.app | first %}
+<title>{% if page.title %}{{ page.title }}{% if app %} | {{ app.name }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if app %}{{ app.name }}の{{ page.title | default: 'サポート' }}{% else %}{{ site.description }}{% endif %}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<main>
+{%- if app %}
+{%- assign app_home = '/' | append: app.id | append: '/' %}
+<nav><a href="{{ '/' | relative_url }}">アプリの一覧</a>{% if page.url != app_home %} › <a href="{{ app_home | relative_url }}">{{ app.name }}</a>{% endif %}</nav>
+{%- endif %}
+{{ content }}
+<footer>&copy; 2026 {{ site.author }}</footer>
+</main>
+</body>
+</html>

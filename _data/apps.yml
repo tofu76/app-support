@@ -1,0 +1,28 @@
+# アプリの一覧。トップページ・各アプリのページ・お問い合わせの欄は、ここから作る。
+# アプリを足すときは README.md の「アプリを足す」に従う。
+#   id:        フォルダ名（URL の一部）。Issue のラベルにも使う
+#   form:      .github/ISSUE_TEMPLATE/ のフォームのファイル名
+#   pages:     アプリのページ（path はフォルダからの相対）。並べた順にリンクを出す
+- id: asimorin
+  name: あしもりん
+  summary: 岡山県立大学のポータル（CampusSquare）の時間割・掲示・課題を、ひとつのアプリで確かめられる非公式アプリです。
+  platforms: iPhone・Android
+  form: feedback-asimorin.yml
+  pages:
+    - path: support.html
+      title: サポート（使い方・よくある質問）
+    - path: privacy.html
+      title: プライバシーポリシー
+    - path: terms.html
+      title: 利用規約（注意事項・免責事項）
+
+- id: nokosoku
+  name: No梗塞
+  summary: 毎日の記録を通じて生活習慣を振り返る、一般向けのセルフケア支援アプリです。医療機器ではなく、診断や治療を行いません。
+  platforms: iPhone
+  form: feedback-nokosoku.yml
+  pages:
+    - path: support.html
+      title: サポート（使い方・よくある質問・お問い合わせ）
+    - path: privacy.html
+      title: プライバシーポリシー
