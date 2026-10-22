@@ -13,6 +13,7 @@ Issue の内容は公開されます。名前・連絡先・ID やパスワー�
 | --- | --- | --- |
 | あしもりん | [サポート](https://tofu76.github.io/app-support/asimorin/support.html)・[プライバシーポリシー](https://tofu76.github.io/app-support/asimorin/privacy.html)・[利用規約](https://tofu76.github.io/app-support/asimorin/terms.html) | `feedback-asimorin.yml`（`asimorin`） |
 | No梗塞 | [サポート](https://tofu76.github.io/app-support/nokosoku/support.html)・[プライバシーポリシー](https://tofu76.github.io/app-support/nokosoku/privacy.html) | `feedback-nokosoku.yml`（`nokosoku`） |
+| アスデミック | [サポート](https://tofu76.github.io/app-support/asudemic/support.html)・[プライバシーポリシー](https://tofu76.github.io/app-support/asudemic/privacy.html) | `feedback-asudemic.yml`（`asudemic`） |
 
 ## 構成
 

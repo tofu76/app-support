@@ -26,3 +26,14 @@
       title: サポート（使い方・よくある質問・お問い合わせ）
     - path: privacy.html
       title: プライバシーポリシー
+
+- id: asudemic
+  name: アスデミック
+  summary: 部活をしている中学生・高校生のための、睡眠と勉強の習慣をつくるアプリです。
+  platforms: iPhone
+  form: feedback-asudemic.yml
+  pages:
+    - path: support.html
+      title: サポート（使い方・よくある質問・お問い合わせ）
+    - path: privacy.html
+      title: プライバシーポリシー

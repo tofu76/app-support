@@ -1,0 +1,42 @@
+# アスデミックへのご意見・お問い合わせのフォーム。
+#   https://github.com/tofu76/app-support/issues/new?template=feedback-asudemic.yml
+# 項目の id（kind / content / device）はほかのアプリのフォームとそろえてある。
+# アプリから事前入力で開くようにするときは、id と kind の選択肢の文字列を変えないこと。
+name: アスデミックへのご意見・お問い合わせ
+description: アスデミックの使い方・不具合・ご要望をお寄せください。
+title: "【アスデミック】"
+labels: ["asudemic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **送った内容は公開され、誰でも読めます。**
+        - 送るには GitHub のアカウントが要ります（GitHub は 13 歳以上が使えます。13 歳未満の方は、保護者の方にお願いしてください）。
+        - 名前・学校名・クラス・メールアドレスなどは書かないでください。
+        - 睡眠や勉強の記録、テストの点数をそのまま貼らないでください。
+        - 土曜・日曜に確認してお返事します（平日はお返事できません）。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 使い方
+        - 不具合
+        - 要望
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      description: できるだけ具体的にお書きください（不具合は、どの画面で何をしたらどうなったか）。
+    validations:
+      required: true
+  - type: textarea
+    id: device
+    attributes:
+      label: 端末の情報（任意）
+      description: 機種、iOS の版、アプリの版などです。
+    validations:
+      required: false
